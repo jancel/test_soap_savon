@@ -1,5 +1,5 @@
 Given(/^I have a wsdl location$/) do
-  @wsdl_location = "http://example.com/soap/wsdl"
+  @wsdl_location = "http://localhost:4000/soap/wsdl"
 end
 
 Given(/^I have created a Savon client$/) do
@@ -7,5 +7,5 @@ Given(/^I have created a Savon client$/) do
 end
 
 Then(/^I should have (\d+) operation$/) do |arg1|
-  @client.operations.count.should eql 1
+  @client.operations.count == 1
 end
